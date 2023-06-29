@@ -20,17 +20,15 @@ class APIManger {
         sessionManager = Session(configuration: configuration, interceptor: nil)
     }
     
-    func coinDesk(success:((_ unlockToken: String) -> Void)?, failure: ((_ error: Error) -> Void)?) {
+    func coinDesk(success: ((_ currency: Currency) -> Void)?, failure: ((_ error: Error) -> Void)?) {
         _ = sessionManager.request(Router.baseURLString)
             .responseDecodable(of: Currency.self, completionHandler:  { response in
                 switch response {
                 case .success(let response):
-                    print("response == \(response)")
+                    success?(response)
                 case .failure(let error):
                     failure?(error)
                 }
-                // Process userResponse, of type DataResponse<User>:
             })
-//            .responseDecodable(of: Currency.self)
     }
 }

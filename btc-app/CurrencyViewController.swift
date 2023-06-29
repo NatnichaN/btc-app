@@ -23,9 +23,7 @@ class CurrencyViewController {
             guard let strongSelf = self else {
                 return
             }
-            print("currency == \(currency)")
-//            strongSelf.currency = currency
-//            strongSelf.fetchContentSucces(vc: self)
+            strongSelf.currency = currency
         }, failure: { [weak self] error in
             print("\(error)")
         })

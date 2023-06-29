@@ -11,7 +11,7 @@ struct Currency {
     var contentTimeStamp: TimeStamp
     var disclaimer: String
     var chartName: String
-    var bpi: [BPI]?
+    var bpi: BPI
     
     enum CodingKeys: String, CodingKey {
         case contentTimeStamp = "time"
@@ -24,9 +24,9 @@ struct Currency {
 extension Currency: Decodable {}
 
 struct TimeStamp {
-    var updated: Date
-    var updatedISO: Date
-    var updatedUK: Date
+    var updated: String
+    var updatedISO: String
+    var updatedUK: String
     
     enum CodingKeys: String, CodingKey {
         case updated
@@ -38,9 +38,9 @@ struct TimeStamp {
 extension TimeStamp: Decodable {}
 
 struct BPI {
-    var usd: [BPIRate]
-    var gbp: [BPIRate]
-    var eur: [BPIRate]
+    var usd: BPIRate
+    var gbp: BPIRate
+    var eur: BPIRate
     
     enum CodingKeys: String, CodingKey {
         case usd = "USD"

@@ -46,15 +46,13 @@ final class ResponseSerializerDecodeble<T: Decodable>: ResponseSerializer {
                 return .failure(error)
             }
         }
-//        print("statusCode == \(String(describing: response?.statusCode))")
-//        print("urlRequest == \(String(describing: request?.url?.absoluteString))")
         guard let data = data else { return .failure(error!) }
         do {
             if (200..<300).contains(response!.statusCode){
                 let result = try successSerializer.serialize(request: request, response: response, data: data, error: nil)
                 return .success(result)
             } else {
-                let errorResponse = try errorSerializer.serialize(request: request, response: response, data: data, error: nil)
+                _ = try errorSerializer.serialize(request: request, response: response, data: data, error: nil)
                 return .failure(error!)
             }
         } catch {
