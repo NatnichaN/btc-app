@@ -52,13 +52,12 @@ struct BPI {
 extension BPI: Decodable {}
 
 struct BPIRate {
-    var code: String
+    
+    var code: BPIType
     var symbol: String
     var rate: String
     var description: String
     var rateFloat: CGFloat
-    // custom param
-    var type: BPIType
     
     enum CodingKeys: String, CodingKey {
         case code
@@ -66,18 +65,7 @@ struct BPIRate {
         case rate
         case description
         case rateFloat = "rate_float"
-        case type
     }
 }
 
-extension BPIRate: Decodable {
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        self.code = try values.decode(String.self, forKey: .code)
-        self.symbol = try values.decode(String.self, forKey: .symbol)
-        self.rate = try values.decode(String.self, forKey: .rate)
-        self.description = try values.decode(String.self, forKey: .description)
-        self.rateFloat = try values.decode(CGFloat.self, forKey: .rateFloat)
-        self.type = try values.decode(BPIType.self, forKey: .code)
-    }
-}
+extension BPIRate: Decodable {}

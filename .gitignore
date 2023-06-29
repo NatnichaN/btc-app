@@ -118,3 +118,4 @@ xcuserdata
 btc-app.xcworkspace/xcuserdata/natnicha.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
 btc-app.xcodeproj/xcuserdata/natnicha.xcuserdatad/xcschemes/xcschememanagement.plist
 Pods/Pods.xcodeproj/xcuserdata/natnicha.xcuserdatad/xcschemes/xcschememanagement.plist
+*.xcbkptlist

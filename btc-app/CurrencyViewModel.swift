@@ -22,7 +22,7 @@ class CurrencyViewModel {
     
     var delegate: CurrencyViewModelDelegate?
     var currency: Currency?
-    var bpiRateList: [BPIRate]
+    var bpiRateList: [BPIRate]? = []
     private var pollingTimer: Timer!
     let fetchInterval = 60.0
     
@@ -30,18 +30,19 @@ class CurrencyViewModel {
     }
     
     func numberOfItem() -> Int {
-        return bpiRateList.count
+        return bpiRateList?.count ?? 0
     }
     
-    func cellForItemAt(indexPath: NSIndexPath)  {
-        return bpiRateList[indexPath.row]
+    func cellForItemAt(indexPath: NSIndexPath) -> BPIRate? {
+        return bpiRateList?[indexPath.row] ?? nil
     }
     
     func manageBpiRateList() {
-        for item in self.currency?.bpi {
-            bpiRateList
+        if let bpiItem = self.currency?.bpi {
+            bpiRateList?.append(bpiItem.usd)
+            bpiRateList?.append(bpiItem.gbp)
+            bpiRateList?.append(bpiItem.eur)
         }
-        bpiRateList =
     }
     // MAKR: - fetch data
     func initFetchScheduled() {
@@ -54,13 +55,12 @@ class CurrencyViewModel {
             ProgressHUD.dismiss()
             guard let weakSelf = self else { return }
             weakSelf.currency = currency
-            print("lasted update time:  \(currency.contentTimeStamp.updated)")
+            weakSelf.manageBpiRateList()
             weakSelf.delegate?.fetchContentSuccess(vc: weakSelf)
             guard weakSelf.pollingTimer == nil else { return }
 //            weakSelf.initFetchScheduled()
         }, failure: { [weak self] error in
             ProgressHUD.showFailed("\(error)")
-            print("\(error)")
             guard let weakSelf = self else { return }
             guard weakSelf.pollingTimer != nil else { return }
             weakSelf.resetTimer()
