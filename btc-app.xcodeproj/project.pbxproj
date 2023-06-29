@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C3DDA78697BC393E5779D5F /* Pods_btc_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61856DA81375328D0FB782D /* Pods_btc_app.framework */; };
+		820462B22A4D0B4D0030874F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 820462B12A4D0B4D0030874F /* Alamofire */; };
 		82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */; };
 		82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */; };
 		82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AF2A4D022A00B2F30D /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3DDA78697BC393E5779D5F /* Pods_btc_app.framework in Frameworks */,
+				820462B22A4D0B4D0030874F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +90,6 @@
 				142BF658F0EB991C6489630C /* Pods-btc-app.debug.xcconfig */,
 				D1BD13B8480BBBEFA14D2235 /* Pods-btc-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,13 +104,15 @@
 				82CC98A42A4D022A00B2F30D /* Sources */,
 				82CC98A52A4D022A00B2F30D /* Frameworks */,
 				82CC98A62A4D022A00B2F30D /* Resources */,
-				707D462664F80C7C38C76EB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "btc-app";
+			packageProductDependencies = (
+				820462B12A4D0B4D0030874F /* Alamofire */,
+			);
 			productName = "btc-app";
 			productReference = 82CC98A82A4D022A00B2F30D /* btc-app.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 82CC989F2A4D022A00B2F30D;
+			packageReferences = (
+				820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 82CC98A92A4D022A00B2F30D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,23 +167,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		707D462664F80C7C38C76EB0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7B55FF54D8211218D5205B55 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -365,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +384,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		820462B12A4D0B4D0030874F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 82CC98A02A4D022A00B2F30D /* Project object */;
 }

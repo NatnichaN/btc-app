@@ -7,82 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46EB2E00000230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000220 /* Foundation.framework */; };
-		46EB2E00000240 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000000F0 /* SVIndefiniteAnimatedView.m */; };
-		46EB2E00000250 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000110 /* SVProgressAnimatedView.m */; };
-		46EB2E00000260 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000130 /* SVProgressHUD.m */; };
-		46EB2E00000270 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000150 /* SVRadialGradientLayer.m */; };
-		46EB2E00000280 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000000E0 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00000290 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000100 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E000002A0 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000120 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E000002B0 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000140 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E000002C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000170 /* SVProgressHUD.bundle */; };
-		46EB2E00000320 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000310 /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00000360 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000350 /* SVProgressHUD-dummy.m */; };
-		46EB2E00000380 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000370 /* QuartzCore.framework */; };
-		46EB2E00000420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000220 /* Foundation.framework */; };
-		46EB2E00000490 /* Pods-btc-app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000480 /* Pods-btc-app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E000004E0 /* Pods-btc-app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004D0 /* Pods-btc-app-dummy.m */; };
+		46EB2E00000170 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* Foundation.framework */; };
+		46EB2E000001E0 /* Pods-btc-app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000001D0 /* Pods-btc-app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000220 /* Pods-btc-app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000210 /* Pods-btc-app-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		46EB2E000004F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E00000000 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C8D67D8B72D6BA42CCEDB648537A340;
-			remoteInfo = SVProgressHUD;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		46EB2E000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46EB2E000000E0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		46EB2E000000F0 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		46EB2E00000100 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
-		46EB2E00000110 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		46EB2E00000120 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		46EB2E00000130 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
-		46EB2E00000140 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		46EB2E00000150 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		46EB2E00000170 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		46EB2E00000220 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E000002E0 /* SVProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
-		46EB2E000002F0 /* SVProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.release.xcconfig; sourceTree = "<group>"; };
-		46EB2E00000300 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		46EB2E00000310 /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E00000330 /* SVProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SVProgressHUD-Info.plist"; sourceTree = "<group>"; };
-		46EB2E00000340 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		46EB2E00000350 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		46EB2E00000370 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E00000440 /* Pods-btc-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00000450 /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00000460 /* Pods-btc-app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-Info.plist"; sourceTree = "<group>"; };
-		46EB2E00000470 /* Pods-btc-app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-btc-app.modulemap"; sourceTree = "<group>"; };
-		46EB2E00000480 /* Pods-btc-app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-btc-app-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E000004A0 /* Pods-btc-app-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-btc-app-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E000004B0 /* Pods-btc-app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E000004C0 /* Pods-btc-app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-btc-app-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E000004D0 /* Pods-btc-app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-btc-app-dummy.m"; sourceTree = "<group>"; };
+		46EB2E000000B0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E00000160 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E00000190 /* Pods-btc-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000001A0 /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000001B0 /* Pods-btc-app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-Info.plist"; sourceTree = "<group>"; };
+		46EB2E000001C0 /* Pods-btc-app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-btc-app.modulemap"; sourceTree = "<group>"; };
+		46EB2E000001D0 /* Pods-btc-app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-btc-app-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E000001F0 /* Pods-btc-app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00000200 /* Pods-btc-app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-btc-app-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00000210 /* Pods-btc-app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-btc-app-dummy.m"; sourceTree = "<group>"; };
 		B1C8F19A6F7076A50B3C39F90D56863D /* Pods-btc-app */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-btc-app"; path = Pods_btc_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46EB2E000001F0 /* Frameworks */ = {
+		46EB2E00000130 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000230 /* Foundation.framework in Frameworks */,
-				46EB2E00000380 /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46EB2E00000400 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46EB2E00000420 /* Foundation.framework in Frameworks */,
+				46EB2E00000170 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +41,8 @@
 		46EB2E00000010 = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000C0 /* Podfile */,
+				46EB2E000000B0 /* Podfile */,
 				46EB2E00000060 /* Frameworks */,
-				46EB2E00000080 /* Pods */,
 				46EB2E00000020 /* Products */,
 				46EB2E00000070 /* Targets Support Files */,
 			);
@@ -104,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				B1C8F19A6F7076A50B3C39F90D56863D /* Pods-btc-app */,
-				E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +59,7 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000210 /* iOS */,
+				46EB2E00000150 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,89 +67,30 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000430 /* Pods-btc-app */,
+				46EB2E00000180 /* Pods-btc-app */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		46EB2E00000080 /* Pods */ = {
+		46EB2E00000150 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000B0 /* SVProgressHUD */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		46EB2E000000B0 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E000000D0 /* Core */,
-				46EB2E000002D0 /* Support Files */,
-			);
-			name = SVProgressHUD;
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
-		46EB2E000000D0 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E000000E0 /* SVIndefiniteAnimatedView.h */,
-				46EB2E000000F0 /* SVIndefiniteAnimatedView.m */,
-				46EB2E00000100 /* SVProgressAnimatedView.h */,
-				46EB2E00000110 /* SVProgressAnimatedView.m */,
-				46EB2E00000120 /* SVProgressHUD.h */,
-				46EB2E00000130 /* SVProgressHUD.m */,
-				46EB2E00000140 /* SVRadialGradientLayer.h */,
-				46EB2E00000150 /* SVRadialGradientLayer.m */,
-				46EB2E00000160 /* Resources */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		46EB2E00000160 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E00000170 /* SVProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		46EB2E00000210 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E00000220 /* Foundation.framework */,
-				46EB2E00000370 /* QuartzCore.framework */,
+				46EB2E00000160 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		46EB2E000002D0 /* Support Files */ = {
+		46EB2E00000180 /* Pods-btc-app */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000300 /* SVProgressHUD.modulemap */,
-				46EB2E00000350 /* SVProgressHUD-dummy.m */,
-				46EB2E00000330 /* SVProgressHUD-Info.plist */,
-				46EB2E00000340 /* SVProgressHUD-prefix.pch */,
-				46EB2E00000310 /* SVProgressHUD-umbrella.h */,
-				46EB2E000002E0 /* SVProgressHUD.debug.xcconfig */,
-				46EB2E000002F0 /* SVProgressHUD.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SVProgressHUD";
-			sourceTree = "<group>";
-		};
-		46EB2E00000430 /* Pods-btc-app */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E00000470 /* Pods-btc-app.modulemap */,
-				46EB2E000004C0 /* Pods-btc-app-acknowledgements.markdown */,
-				46EB2E000004B0 /* Pods-btc-app-acknowledgements.plist */,
-				46EB2E000004D0 /* Pods-btc-app-dummy.m */,
-				46EB2E000004A0 /* Pods-btc-app-frameworks.sh */,
-				46EB2E00000460 /* Pods-btc-app-Info.plist */,
-				46EB2E00000480 /* Pods-btc-app-umbrella.h */,
-				46EB2E00000450 /* Pods-btc-app.debug.xcconfig */,
-				46EB2E00000440 /* Pods-btc-app.release.xcconfig */,
+				46EB2E000001C0 /* Pods-btc-app.modulemap */,
+				46EB2E00000200 /* Pods-btc-app-acknowledgements.markdown */,
+				46EB2E000001F0 /* Pods-btc-app-acknowledgements.plist */,
+				46EB2E00000210 /* Pods-btc-app-dummy.m */,
+				46EB2E000001B0 /* Pods-btc-app-Info.plist */,
+				46EB2E000001D0 /* Pods-btc-app-umbrella.h */,
+				46EB2E000001A0 /* Pods-btc-app.debug.xcconfig */,
+				46EB2E00000190 /* Pods-btc-app.release.xcconfig */,
 			);
 			name = "Pods-btc-app";
 			path = "Target Support Files/Pods-btc-app";
@@ -211,60 +99,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		46EB2E000001D0 /* Headers */ = {
+		46EB2E00000110 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000280 /* SVIndefiniteAnimatedView.h in Headers */,
-				46EB2E00000290 /* SVProgressAnimatedView.h in Headers */,
-				46EB2E000002A0 /* SVProgressHUD.h in Headers */,
-				46EB2E00000320 /* SVProgressHUD-umbrella.h in Headers */,
-				46EB2E000002B0 /* SVRadialGradientLayer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46EB2E000003E0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46EB2E00000490 /* Pods-btc-app-umbrella.h in Headers */,
+				46EB2E000001E0 /* Pods-btc-app-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00000190 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
-			buildPhases = (
-				46EB2E000001D0 /* Headers */,
-				46EB2E000001E0 /* Sources */,
-				46EB2E000001F0 /* Frameworks */,
-				46EB2E00000200 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SVProgressHUD;
-			productName = SVProgressHUD;
-			productReference = E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */;
-			productType = "com.apple.product-type.framework";
-		};
 		AF4CC838A7445E014C6599C6E07836B7 /* Pods-btc-app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E000003A0 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */;
+			buildConfigurationList = 46EB2E000000D0 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */;
 			buildPhases = (
-				46EB2E000003E0 /* Headers */,
-				46EB2E000003F0 /* Sources */,
-				46EB2E00000400 /* Frameworks */,
-				46EB2E00000410 /* Resources */,
+				46EB2E00000110 /* Headers */,
+				46EB2E00000120 /* Sources */,
+				46EB2E00000130 /* Frameworks */,
+				46EB2E00000140 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00000500 /* PBXTargetDependency */,
 			);
 			name = "Pods-btc-app";
 			productName = Pods_btc_app;
@@ -294,21 +151,12 @@
 			projectRoot = "";
 			targets = (
 				AF4CC838A7445E014C6599C6E07836B7 /* Pods-btc-app */,
-				1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		46EB2E00000200 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46EB2E000002C0 /* SVProgressHUD.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46EB2E00000410 /* Resources */ = {
+		46EB2E00000140 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,36 +166,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46EB2E000001E0 /* Sources */ = {
+		46EB2E00000120 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000240 /* SVIndefiniteAnimatedView.m in Sources */,
-				46EB2E00000250 /* SVProgressAnimatedView.m in Sources */,
-				46EB2E00000260 /* SVProgressHUD.m in Sources */,
-				46EB2E00000360 /* SVProgressHUD-dummy.m in Sources */,
-				46EB2E00000270 /* SVRadialGradientLayer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46EB2E000003F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46EB2E000004E0 /* Pods-btc-app-dummy.m in Sources */,
+				46EB2E00000220 /* Pods-btc-app-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		46EB2E00000500 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SVProgressHUD;
-			target = 1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */;
-			targetProxy = 46EB2E000004F0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		46EB2E00000040 /* Debug */ = {
@@ -403,7 +230,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,78 +305,9 @@
 			};
 			name = Release;
 		};
-		46EB2E000001A0 /* Release */ = {
+		46EB2E000000E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000002F0 /* SVProgressHUD.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = SVProgressHUD;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		46EB2E000001B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000002E0 /* SVProgressHUD.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = SVProgressHUD;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		46EB2E000003B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000440 /* Pods-btc-app.release.xcconfig */;
+			baseConfigurationReference = 46EB2E00000190 /* Pods-btc-app.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -563,7 +321,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-btc-app/Pods-btc-app-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,9 +343,9 @@
 			};
 			name = Release;
 		};
-		46EB2E000003C0 /* Debug */ = {
+		46EB2E000000F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000450 /* Pods-btc-app.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E000001A0 /* Pods-btc-app.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -601,7 +359,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-btc-app/Pods-btc-app-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,20 +392,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E00000190 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+		46EB2E000000D0 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E000001B0 /* Debug */,
-				46EB2E000001A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		46EB2E000003A0 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46EB2E000003C0 /* Debug */,
-				46EB2E000003B0 /* Release */,
+				46EB2E000000F0 /* Debug */,
+				46EB2E000000E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
