@@ -6,9 +6,9 @@
 //
 
 import Foundation
-
+import ProgressHUD
 protocol CurrencyViewControllerDelegate: AnyObject {
-    func fetchContentSucces(vc: CurrencyViewController)
+    func fetchContentSuccess(vc: CurrencyViewController)
     func fetchContentFailed(vc: CurrencyViewController)
 }
 
@@ -27,14 +27,17 @@ class CurrencyViewController {
     }
     
     @objc func fetchData() {
+        ProgressHUD.show()
         APIManger.shared.coinDesk(success: { [weak self] (currency) in
+            ProgressHUD.dismiss()
             guard let weakSelf = self else { return }
             weakSelf.currency = currency
             print("lasted update time:  \(currency.contentTimeStamp.updated)")
-            weakSelf.delegate?.fetchContentSucces(vc: weakSelf)
+            weakSelf.delegate?.fetchContentSuccess(vc: weakSelf)
             guard weakSelf.pollingTimer == nil else { return }
-            weakSelf.initFetchScheduled()
+//            weakSelf.initFetchScheduled()
         }, failure: { [weak self] error in
+            ProgressHUD.showFailed("\(error)")
             print("\(error)")
             guard let weakSelf = self else { return }
             guard weakSelf.pollingTimer != nil else { return }
