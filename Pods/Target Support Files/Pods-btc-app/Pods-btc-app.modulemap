@@ -1,0 +1,6 @@
+framework module Pods_btc_app {
+  umbrella header "Pods-btc-app-umbrella.h"
+
+  export *
+  module * { export * }
+}

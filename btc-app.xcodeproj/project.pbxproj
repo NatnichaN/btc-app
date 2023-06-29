@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3DDA78697BC393E5779D5F /* Pods_btc_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61856DA81375328D0FB782D /* Pods_btc_app.framework */; };
 		82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */; };
 		82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */; };
 		82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AF2A4D022A00B2F30D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142BF658F0EB991C6489630C /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-btc-app.debug.xcconfig"; path = "Target Support Files/Pods-btc-app/Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
 		82CC98A82A4D022A00B2F30D /* btc-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "btc-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		82CC98B42A4D022E00B2F30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82CC98B72A4D022E00B2F30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82CC98B92A4D022E00B2F30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61856DA81375328D0FB782D /* Pods_btc_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_btc_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1BD13B8480BBBEFA14D2235 /* Pods-btc-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-btc-app.release.xcconfig"; path = "Target Support Files/Pods-btc-app/Pods-btc-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3DDA78697BC393E5779D5F /* Pods_btc_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27AE6887A56ECC584B2F7CE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C61856DA81375328D0FB782D /* Pods_btc_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82CC989F2A4D022A00B2F30D = {
 			isa = PBXGroup;
 			children = (
 				82CC98AA2A4D022A00B2F30D /* btc-app */,
 				82CC98A92A4D022A00B2F30D /* Products */,
+				8A19A7672272F633ACA4F311 /* Pods */,
+				27AE6887A56ECC584B2F7CE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "btc-app";
 			sourceTree = "<group>";
 		};
+		8A19A7672272F633ACA4F311 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				142BF658F0EB991C6489630C /* Pods-btc-app.debug.xcconfig */,
+				D1BD13B8480BBBEFA14D2235 /* Pods-btc-app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82CC98BC2A4D022E00B2F30D /* Build configuration list for PBXNativeTarget "btc-app" */;
 			buildPhases = (
+				7B55FF54D8211218D5205B55 /* [CP] Check Pods Manifest.lock */,
 				82CC98A42A4D022A00B2F30D /* Sources */,
 				82CC98A52A4D022A00B2F30D /* Frameworks */,
 				82CC98A62A4D022A00B2F30D /* Resources */,
+				707D462664F80C7C38C76EB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		707D462664F80C7C38C76EB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B55FF54D8211218D5205B55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-btc-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82CC98A42A4D022A00B2F30D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		82CC98BD2A4D022E00B2F30D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142BF658F0EB991C6489630C /* Pods-btc-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		82CC98BE2A4D022E00B2F30D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1BD13B8480BBBEFA14D2235 /* Pods-btc-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
