@@ -3,4 +3,84 @@
    uuid = "5A865D42-4027-4DB7-8C37-8EC946CAEC6D"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "796D3F1F-2C0C-4F7A-8373-3F7E7FD7B2F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "btc-app/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "796D3F1F-2C0C-4F7A-8373-3F7E7FD7B2F2 - 1cba6d0b7ea2e4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "btc_app.ViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "btc-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natnicha/btc-app/btc-app/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "391">
+               </Location>
+               <Location
+                  uuid = "796D3F1F-2C0C-4F7A-8373-3F7E7FD7B2F2 - 1cba6d0b7ea2e4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "btc_app.ViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "btc-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natnicha/btc-app/btc-app/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "450">
+               </Location>
+               <Location
+                  uuid = "796D3F1F-2C0C-4F7A-8373-3F7E7FD7B2F2 - 1cba6d0b7ea2e4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "btc_app.ViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "btc-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natnicha/btc-app/btc-app/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "185">
+               </Location>
+               <Location
+                  uuid = "796D3F1F-2C0C-4F7A-8373-3F7E7FD7B2F2 - 1cba6d0b7ea2e4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "btc_app.ViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "btc-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natnicha/btc-app/btc-app/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
