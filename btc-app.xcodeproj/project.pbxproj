@@ -11,6 +11,10 @@
 		820462B22A4D0B4D0030874F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 820462B12A4D0B4D0030874F /* Alamofire */; };
 		820462B62A4D0E1C0030874F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462B52A4D0E1C0030874F /* Currency.swift */; };
 		820462BA2A4D12C00030874F /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462B92A4D12C00030874F /* CurrencyViewController.swift */; };
+		820462BC2A4D2E190030874F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462BB2A4D2E190030874F /* APIManager.swift */; };
+		820462BE2A4D42510030874F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462BD2A4D42510030874F /* Router.swift */; };
+		820462C02A4D48D60030874F /* ResponseSerializerDecodeble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462BF2A4D48D60030874F /* ResponseSerializerDecodeble.swift */; };
+		820462C22A4D49CC0030874F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462C12A4D49CC0030874F /* APIError.swift */; };
 		82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */; };
 		82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */; };
 		82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AF2A4D022A00B2F30D /* ViewController.swift */; };
@@ -23,6 +27,10 @@
 		142BF658F0EB991C6489630C /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-btc-app.debug.xcconfig"; path = "Target Support Files/Pods-btc-app/Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
 		820462B52A4D0E1C0030874F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		820462B92A4D12C00030874F /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		820462BB2A4D2E190030874F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		820462BD2A4D42510030874F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		820462BF2A4D48D60030874F /* ResponseSerializerDecodeble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerializerDecodeble.swift; sourceTree = "<group>"; };
+		820462C12A4D49CC0030874F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		82CC98A82A4D022A00B2F30D /* btc-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "btc-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				82CC98B92A4D022E00B2F30D /* Info.plist */,
 				820462B52A4D0E1C0030874F /* Currency.swift */,
 				820462B92A4D12C00030874F /* CurrencyViewController.swift */,
+				820462BB2A4D2E190030874F /* APIManager.swift */,
+				820462BD2A4D42510030874F /* Router.swift */,
+				820462BF2A4D48D60030874F /* ResponseSerializerDecodeble.swift */,
+				820462C12A4D49CC0030874F /* APIError.swift */,
 			);
 			path = "btc-app";
 			sourceTree = "<group>";
@@ -202,11 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820462BC2A4D2E190030874F /* APIManager.swift in Sources */,
 				820462BA2A4D12C00030874F /* CurrencyViewController.swift in Sources */,
 				820462B62A4D0E1C0030874F /* Currency.swift in Sources */,
+				820462BE2A4D42510030874F /* Router.swift in Sources */,
+				820462C02A4D48D60030874F /* ResponseSerializerDecodeble.swift in Sources */,
 				82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */,
 				82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */,
 				82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */,
+				820462C22A4D49CC0030874F /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

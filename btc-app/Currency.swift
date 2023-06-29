@@ -6,23 +6,27 @@
 //
 
 import Foundation
+
 struct Currency {
-    let contentTimeStamp: TimeStamp?
-    let disclaimer: String
-    let chartName: String
-    let bpi: [BPI]
+    var contentTimeStamp: TimeStamp
+    var disclaimer: String
+    var chartName: String
+    var bpi: [BPI]?
+    
     enum CodingKeys: String, CodingKey {
         case contentTimeStamp = "time"
         case disclaimer
-        case chartName
+        case chartName = "chartName"
         case bpi
     }
 }
 
+extension Currency: Decodable {}
+
 struct TimeStamp {
-    let updated: Date?
-    let updatedISO: Date?
-    let updatedUK: Date?
+    var updated: Date
+    var updatedISO: Date
+    var updatedUK: Date
     
     enum CodingKeys: String, CodingKey {
         case updated
@@ -31,10 +35,12 @@ struct TimeStamp {
     }
 }
 
+extension TimeStamp: Decodable {}
+
 struct BPI {
-    let usd: [BPIRate]?
-    let gbp: [BPIRate]?
-    let eur: [BPIRate]?
+    var usd: [BPIRate]
+    var gbp: [BPIRate]
+    var eur: [BPIRate]
     
     enum CodingKeys: String, CodingKey {
         case usd = "USD"
@@ -43,12 +49,14 @@ struct BPI {
     }
 }
 
+extension BPI: Decodable {}
+
 struct BPIRate {
-    let code: String
-    let symbol: String
-    let rate: String
-    let description: String
-    let rateFloat: CGFloat
+    var code: String
+    var symbol: String
+    var rate: String
+    var description: String
+    var rateFloat: CGFloat
     
     enum CodingKeys: String, CodingKey {
         case code
@@ -58,3 +66,5 @@ struct BPIRate {
         case rateFloat = "rate_float"
     }
 }
+
+extension BPIRate: Decodable {}

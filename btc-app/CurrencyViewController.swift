@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 protocol CurrencyViewControllerDelegate: AnyObject {
     func fetchContentSucces(vc: CurrencyViewController)
@@ -15,22 +14,20 @@ protocol CurrencyViewControllerDelegate: AnyObject {
 
 class CurrencyViewController {
     
-    var delegate: ViewControllerDelegate?
+    var delegate: CurrencyViewControllerDelegate?
     var currency: Currency?
     init() {}
-
-//    func currency() -> Currency {
-//        return currency ?? nil
-//    }
     
     func fetchData(){
-    }
-    
-    func fetchContentSucces(vc: CurrencyViewController) {
-        delegate?.reloadContentSucces(vc: vc)
-    }
-    
-    func fetchContentFailed(vc: CurrencyViewController) {
-        delegate?.reloadContentFailed(vc: vc)
+        APIManger.shared.coinDesk(success: { [weak self] (currency) in
+            guard let strongSelf = self else {
+                return
+            }
+            print("currency == \(currency)")
+//            strongSelf.currency = currency
+//            strongSelf.fetchContentSucces(vc: self)
+        }, failure: { [weak self] error in
+            print("\(error)")
+        })
     }
 }

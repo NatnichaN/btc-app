@@ -6,14 +6,13 @@
 //
 
 import UIKit
-protocol ViewControllerDelegate: AnyObject {
-    func reloadContentSucces(vc: CurrencyViewController)
-    func reloadContentFailed(vc: CurrencyViewController)
-}
+//protocol ViewControllerDelegate: AnyObject {
+//    func reloadContentSucces(vc: CurrencyViewController)
+//    func reloadContentFailed(vc: CurrencyViewController)
+//}
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ViewControllerDelegate {
-    
-    weak var delegate: ViewControllerDelegate?
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CurrencyViewControllerDelegate {
+
     var currencyVC = CurrencyViewController()
     private var refreshControl: UIRefreshControl!
     @IBOutlet weak var tableView: UITableView!
@@ -21,11 +20,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.blue
+        refreshControl.addTarget(self, action: #selector(self.didPullToRefresh(control:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
         currencyVC.delegate = self
-//        currencyVC.fetchData()
-        tableView.reloadData()
+        currencyVC.fetchData()
     }
-
+    
+    @objc func didPullToRefresh(control: UIRefreshControl) {
+        currencyVC.fetchData()
+    }
+    
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.model.count
@@ -33,20 +39,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "currencyCell")!
-        cell.textLabel?.text = "cell \(String(describing: self.model[indexPath.row]))"
+        cell.textLabel?.text = "title \(String(describing: self.model[indexPath.row]))"
         return cell
     }
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        return 80.0
     }
-    // MARK: - ViewControllerDelegate
-    func reloadContentSucces(vc: CurrencyViewController) {
+    // MARK: - CurrencyViewControllerDelegate
+    func fetchContentSucces(vc: CurrencyViewController) {
         tableView.reloadData()
     }
     
-    func reloadContentFailed(vc: CurrencyViewController) {
+    func fetchContentFailed(vc: CurrencyViewController) {
         print("reloadContentFailed")
     }
 }
