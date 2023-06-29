@@ -122,6 +122,7 @@
 				82CC98A42A4D022A00B2F30D /* Sources */,
 				82CC98A52A4D022A00B2F30D /* Frameworks */,
 				82CC98A62A4D022A00B2F30D /* Resources */,
+				5064BD00473B8F158FD1F2E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,7 +161,7 @@
 			);
 			mainGroup = 82CC989F2A4D022A00B2F30D;
 			packageReferences = (
-				820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 			);
 			productRefGroup = 82CC98A92A4D022A00B2F30D /* Products */;
 			projectDirPath = "";
@@ -185,6 +186,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5064BD00473B8F158FD1F2E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-btc-app/Pods-btc-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7B55FF54D8211218D5205B55 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,7 +464,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -459,7 +477,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		820462B12A4D0B4D0030874F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

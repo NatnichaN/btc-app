@@ -7,5 +7,5 @@ install! 'cocoapods', :deterministic_uuids => false, :warn_for_unused_master_spe
 use_frameworks!
 
 target 'btc-app' do
-
+  pod 'ProgressHUD'
 end

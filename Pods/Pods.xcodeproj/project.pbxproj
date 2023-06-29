@@ -7,31 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46EB2E00000170 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* Foundation.framework */; };
-		46EB2E000001E0 /* Pods-btc-app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000001D0 /* Pods-btc-app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00000220 /* Pods-btc-app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000210 /* Pods-btc-app-dummy.m */; };
+		46EB2E00000190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* Foundation.framework */; };
+		46EB2E000001A0 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000000D0 /* ProgressHUD.swift */; };
+		46EB2E00000200 /* ProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000001F0 /* ProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000240 /* ProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000230 /* ProgressHUD-dummy.m */; };
+		46EB2E000002E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* Foundation.framework */; };
+		46EB2E00000350 /* Pods-btc-app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000340 /* Pods-btc-app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E000003A0 /* Pods-btc-app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000390 /* Pods-btc-app-dummy.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		46EB2E000003B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 022D0373DF61EE4E133BADB43CE7ED57;
+			remoteInfo = ProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		46EB2E000000B0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46EB2E00000160 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E00000190 /* Pods-btc-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E000001A0 /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E000001B0 /* Pods-btc-app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-Info.plist"; sourceTree = "<group>"; };
-		46EB2E000001C0 /* Pods-btc-app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-btc-app.modulemap"; sourceTree = "<group>"; };
-		46EB2E000001D0 /* Pods-btc-app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-btc-app-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E000001F0 /* Pods-btc-app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E00000200 /* Pods-btc-app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-btc-app-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E00000210 /* Pods-btc-app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-btc-app-dummy.m"; sourceTree = "<group>"; };
+		0D3287058D2F13BD484A454154BEA62B /* ProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProgressHUD; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E000000D0 /* ProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressHUD.swift; path = ProgressHUD/Sources/ProgressHUD.swift; sourceTree = "<group>"; };
+		46EB2E00000180 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E000001C0 /* ProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		46EB2E000001D0 /* ProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		46EB2E000001E0 /* ProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressHUD.modulemap; sourceTree = "<group>"; };
+		46EB2E000001F0 /* ProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000210 /* ProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000220 /* ProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		46EB2E00000230 /* ProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00000300 /* Pods-btc-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000310 /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000320 /* Pods-btc-app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000330 /* Pods-btc-app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-btc-app.modulemap"; sourceTree = "<group>"; };
+		46EB2E00000340 /* Pods-btc-app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-btc-app-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000360 /* Pods-btc-app-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-btc-app-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E00000370 /* Pods-btc-app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-btc-app-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00000380 /* Pods-btc-app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-btc-app-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00000390 /* Pods-btc-app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-btc-app-dummy.m"; sourceTree = "<group>"; };
 		B1C8F19A6F7076A50B3C39F90D56863D /* Pods-btc-app */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-btc-app"; path = Pods_btc_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46EB2E00000130 /* Frameworks */ = {
+		46EB2E00000150 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000170 /* Foundation.framework in Frameworks */,
+				46EB2E00000190 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E000002C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E000002E0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +73,9 @@
 		46EB2E00000010 = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000B0 /* Podfile */,
+				46EB2E000000C0 /* Podfile */,
 				46EB2E00000060 /* Frameworks */,
+				46EB2E00000080 /* Pods */,
 				46EB2E00000020 /* Products */,
 				46EB2E00000070 /* Targets Support Files */,
 			);
@@ -52,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C8F19A6F7076A50B3C39F90D56863D /* Pods-btc-app */,
+				0D3287058D2F13BD484A454154BEA62B /* ProgressHUD */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,7 +93,7 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000150 /* iOS */,
+				46EB2E00000170 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,30 +101,64 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000180 /* Pods-btc-app */,
+				46EB2E000002F0 /* Pods-btc-app */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		46EB2E00000150 /* iOS */ = {
+		46EB2E00000080 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000160 /* Foundation.framework */,
+				46EB2E000000B0 /* ProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		46EB2E000000B0 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000000D0 /* ProgressHUD.swift */,
+				46EB2E000001B0 /* Support Files */,
+			);
+			name = ProgressHUD;
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		46EB2E00000170 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000180 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		46EB2E00000180 /* Pods-btc-app */ = {
+		46EB2E000001B0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000001C0 /* Pods-btc-app.modulemap */,
-				46EB2E00000200 /* Pods-btc-app-acknowledgements.markdown */,
-				46EB2E000001F0 /* Pods-btc-app-acknowledgements.plist */,
-				46EB2E00000210 /* Pods-btc-app-dummy.m */,
-				46EB2E000001B0 /* Pods-btc-app-Info.plist */,
-				46EB2E000001D0 /* Pods-btc-app-umbrella.h */,
-				46EB2E000001A0 /* Pods-btc-app.debug.xcconfig */,
-				46EB2E00000190 /* Pods-btc-app.release.xcconfig */,
+				46EB2E000001E0 /* ProgressHUD.modulemap */,
+				46EB2E00000230 /* ProgressHUD-dummy.m */,
+				46EB2E00000210 /* ProgressHUD-Info.plist */,
+				46EB2E00000220 /* ProgressHUD-prefix.pch */,
+				46EB2E000001F0 /* ProgressHUD-umbrella.h */,
+				46EB2E000001C0 /* ProgressHUD.debug.xcconfig */,
+				46EB2E000001D0 /* ProgressHUD.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ProgressHUD";
+			sourceTree = "<group>";
+		};
+		46EB2E000002F0 /* Pods-btc-app */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000330 /* Pods-btc-app.modulemap */,
+				46EB2E00000380 /* Pods-btc-app-acknowledgements.markdown */,
+				46EB2E00000370 /* Pods-btc-app-acknowledgements.plist */,
+				46EB2E00000390 /* Pods-btc-app-dummy.m */,
+				46EB2E00000360 /* Pods-btc-app-frameworks.sh */,
+				46EB2E00000320 /* Pods-btc-app-Info.plist */,
+				46EB2E00000340 /* Pods-btc-app-umbrella.h */,
+				46EB2E00000310 /* Pods-btc-app.debug.xcconfig */,
+				46EB2E00000300 /* Pods-btc-app.release.xcconfig */,
 			);
 			name = "Pods-btc-app";
 			path = "Target Support Files/Pods-btc-app";
@@ -99,29 +167,56 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		46EB2E00000110 /* Headers */ = {
+		46EB2E00000130 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000001E0 /* Pods-btc-app-umbrella.h in Headers */,
+				46EB2E00000200 /* ProgressHUD-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E000002A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000350 /* Pods-btc-app-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AF4CC838A7445E014C6599C6E07836B7 /* Pods-btc-app */ = {
+		022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E000000D0 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */;
+			buildConfigurationList = 46EB2E000000F0 /* Build configuration list for PBXNativeTarget "ProgressHUD" */;
 			buildPhases = (
-				46EB2E00000110 /* Headers */,
-				46EB2E00000120 /* Sources */,
-				46EB2E00000130 /* Frameworks */,
-				46EB2E00000140 /* Resources */,
+				46EB2E00000130 /* Headers */,
+				46EB2E00000140 /* Sources */,
+				46EB2E00000150 /* Frameworks */,
+				46EB2E00000160 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = ProgressHUD;
+			productName = ProgressHUD;
+			productReference = 0D3287058D2F13BD484A454154BEA62B /* ProgressHUD */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF4CC838A7445E014C6599C6E07836B7 /* Pods-btc-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00000260 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */;
+			buildPhases = (
+				46EB2E000002A0 /* Headers */,
+				46EB2E000002B0 /* Sources */,
+				46EB2E000002C0 /* Frameworks */,
+				46EB2E000002D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E000003C0 /* PBXTargetDependency */,
 			);
 			name = "Pods-btc-app";
 			productName = Pods_btc_app;
@@ -151,12 +246,20 @@
 			projectRoot = "";
 			targets = (
 				AF4CC838A7445E014C6599C6E07836B7 /* Pods-btc-app */,
+				022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		46EB2E00000140 /* Resources */ = {
+		46EB2E00000160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E000002D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,15 +269,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46EB2E00000120 /* Sources */ = {
+		46EB2E00000140 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000220 /* Pods-btc-app-dummy.m in Sources */,
+				46EB2E000001A0 /* ProgressHUD.swift in Sources */,
+				46EB2E00000240 /* ProgressHUD-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E000002B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E000003A0 /* Pods-btc-app-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46EB2E000003C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ProgressHUD;
+			target = 022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */;
+			targetProxy = 46EB2E000003B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		46EB2E00000040 /* Debug */ = {
@@ -305,9 +426,78 @@
 			};
 			name = Release;
 		};
-		46EB2E000000E0 /* Release */ = {
+		46EB2E00000100 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000190 /* Pods-btc-app.release.xcconfig */;
+			baseConfigurationReference = 46EB2E000001D0 /* ProgressHUD.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = ProgressHUD;
+				PRODUCT_NAME = ProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46EB2E00000110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E000001C0 /* ProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = ProgressHUD;
+				PRODUCT_NAME = ProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46EB2E00000270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000300 /* Pods-btc-app.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -343,9 +533,9 @@
 			};
 			name = Release;
 		};
-		46EB2E000000F0 /* Debug */ = {
+		46EB2E00000280 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000001A0 /* Pods-btc-app.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E00000310 /* Pods-btc-app.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -392,11 +582,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E000000D0 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */ = {
+		46EB2E000000F0 /* Build configuration list for PBXNativeTarget "ProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E000000F0 /* Debug */,
-				46EB2E000000E0 /* Release */,
+				46EB2E00000110 /* Debug */,
+				46EB2E00000100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EB2E00000260 /* Build configuration list for PBXNativeTarget "Pods-btc-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EB2E00000280 /* Debug */,
+				46EB2E00000270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
