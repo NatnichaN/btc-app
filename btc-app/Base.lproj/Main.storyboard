@@ -20,36 +20,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aqr-cF-1bV">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="bQX-dU-8lw">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cth-Az-igu">
-                                            <rect key="frame" x="15" y="10" width="363" height="30"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-re-Qkg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qz-sH-C1W">
-                                                    <rect key="frame" x="0.0" y="20.333333333333332" width="363" height="9.6666666666666679"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <color key="textColor" systemColor="systemGray2Color"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="cth-Az-igu" secondAttribute="bottom" constant="10" id="Dsh-k2-HNy"/>
-                                        <constraint firstAttribute="trailing" secondItem="cth-Az-igu" secondAttribute="trailing" constant="15" id="fhx-SR-dmR"/>
-                                        <constraint firstItem="cth-Az-igu" firstAttribute="leading" secondItem="bQX-dU-8lw" secondAttribute="leading" constant="15" id="mUv-yu-r0o"/>
-                                        <constraint firstItem="cth-Az-igu" firstAttribute="top" secondItem="bQX-dU-8lw" secondAttribute="top" constant="10" id="vwb-tj-gpj"/>
-                                    </constraints>
-                                </view>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="xyR-rj-4NA"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="94s-H7-XgV"/>
@@ -66,11 +36,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="detailLabel" destination="9Qz-sH-C1W" id="vT0-JW-DAQ"/>
-                        <outlet property="headerStackView" destination="cth-Az-igu" id="ONA-mK-gq1"/>
-                        <outlet property="headerView" destination="bQX-dU-8lw" id="86h-h0-TsV"/>
                         <outlet property="tableView" destination="aqr-cF-1bV" id="rGe-vR-802"/>
-                        <outlet property="titleLabel" destination="afJ-re-Qkg" id="om1-wd-rI9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,9 +47,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

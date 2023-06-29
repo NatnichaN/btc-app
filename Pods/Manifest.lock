@@ -1,16 +1,20 @@
 PODS:
   - ProgressHUD (13.6.2)
+  - R.swift (7.3.2)
 
 DEPENDENCIES:
   - ProgressHUD
+  - R.swift
 
 SPEC REPOS:
   trunk:
     - ProgressHUD
+    - R.swift
 
 SPEC CHECKSUMS:
   ProgressHUD: 355915c8f033e626788fa9b0d99d06e8691595ab
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
 
-PODFILE CHECKSUM: f220424f18b6ffb5a275e75878b88ed75350f0d9
+PODFILE CHECKSUM: 056b5c3368a7dafa3a7629614a7dd4c3094e69bf
 
 COCOAPODS: 1.12.1

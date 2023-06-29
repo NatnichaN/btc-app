@@ -6,57 +6,39 @@
 //
 
 import UIKit
-class ViewController: UIViewController, CurrencyViewControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var headerStackView: UIStackView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    var currencyVC = CurrencyViewController()
+    @IBOutlet weak var collectionView: UICollectionView!
+    var currencyModel = CurrencyViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        currencyVC.delegate = self
-        currencyVC.fetchData()
-    }
-
-    // MARK: - UITableViewDataSource
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        currencyModel.delegate = self
+        currencyModel.fetchData()
+        registerCell()
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.headerView.frame.height
+    func registerCell() {
+//        collectionView.register(R.nib., forCellWithReuseIdentifier: <#T##String#>)
+//        collectionView.register(R.nib.packageDetailHeaderView, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
+//        collectionView.register(R.nib.cancelPackageFooterView, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter)
     }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        self.titleLabel.text = currencyVC.currency?.chartName
-        self.detailLabel.text = currencyVC.currency?.disclaimer
-        return self.headerView
+    // MARK: - UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return currencyModel.numberOfItem()
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "title \(indexPath.row)"
+    // MARK: - UICollectionViewDataSource
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         return cell
     }
-    // MARK: - UITableViewDelegate
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
-    }
-    // MARK: - CurrencyViewControllerDelegate
-    func fetchContentSuccess(vc: CurrencyViewController) {
+    // MARK: - CurrencyViewModelDelegate
+    func fetchContentSuccess(vc: CurrencyViewModel) {
         print("fetchContentSuccess")
-        tableView.reloadData()
     }
     
-    func fetchContentFailed(vc: CurrencyViewController) {
+    func fetchContentFailed(vc: CurrencyViewModel) {
         print("fetchContentFailed")
     }
 }

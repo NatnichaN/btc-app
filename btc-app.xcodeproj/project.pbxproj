@@ -10,11 +10,17 @@
 		4C3DDA78697BC393E5779D5F /* Pods_btc_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61856DA81375328D0FB782D /* Pods_btc_app.framework */; };
 		820462B22A4D0B4D0030874F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 820462B12A4D0B4D0030874F /* Alamofire */; };
 		820462B62A4D0E1C0030874F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462B52A4D0E1C0030874F /* Currency.swift */; };
-		820462BA2A4D12C00030874F /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462B92A4D12C00030874F /* CurrencyViewController.swift */; };
+		820462BA2A4D12C00030874F /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462B92A4D12C00030874F /* CurrencyViewModel.swift */; };
 		820462BC2A4D2E190030874F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462BB2A4D2E190030874F /* APIManager.swift */; };
 		820462BE2A4D42510030874F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462BD2A4D42510030874F /* Router.swift */; };
 		820462C02A4D48D60030874F /* ResponseSerializerDecodeble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462BF2A4D48D60030874F /* ResponseSerializerDecodeble.swift */; };
 		820462C22A4D49CC0030874F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462C12A4D49CC0030874F /* APIError.swift */; };
+		820462C92A4D997F0030874F /* BitCoinHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462C72A4D997F0030874F /* BitCoinHeaderCollectionViewCell.swift */; };
+		820462CA2A4D997F0030874F /* BitCoinHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820462C82A4D997F0030874F /* BitCoinHeaderCollectionViewCell.xib */; };
+		820462CD2A4D99990030874F /* BitCoinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462CB2A4D99990030874F /* BitCoinCollectionViewCell.swift */; };
+		820462CE2A4D99990030874F /* BitCoinCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820462CC2A4D99990030874F /* BitCoinCollectionViewCell.xib */; };
+		820462D12A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462CF2A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift */; };
+		820462D22A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820462D02A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib */; };
 		82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */; };
 		82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */; };
 		82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AF2A4D022A00B2F30D /* ViewController.swift */; };
@@ -26,11 +32,17 @@
 /* Begin PBXFileReference section */
 		142BF658F0EB991C6489630C /* Pods-btc-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-btc-app.debug.xcconfig"; path = "Target Support Files/Pods-btc-app/Pods-btc-app.debug.xcconfig"; sourceTree = "<group>"; };
 		820462B52A4D0E1C0030874F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		820462B92A4D12C00030874F /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		820462B92A4D12C00030874F /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
 		820462BB2A4D2E190030874F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		820462BD2A4D42510030874F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		820462BF2A4D48D60030874F /* ResponseSerializerDecodeble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerializerDecodeble.swift; sourceTree = "<group>"; };
 		820462C12A4D49CC0030874F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		820462C72A4D997F0030874F /* BitCoinHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		820462C82A4D997F0030874F /* BitCoinHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitCoinHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		820462CB2A4D99990030874F /* BitCoinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinCollectionViewCell.swift; sourceTree = "<group>"; };
+		820462CC2A4D99990030874F /* BitCoinCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitCoinCollectionViewCell.xib; sourceTree = "<group>"; };
+		820462CF2A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinFooterCollectionViewCell.swift; sourceTree = "<group>"; };
+		820462D02A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitCoinFooterCollectionViewCell.xib; sourceTree = "<group>"; };
 		82CC98A82A4D022A00B2F30D /* btc-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "btc-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,11 +105,17 @@
 				82CC98B62A4D022E00B2F30D /* LaunchScreen.storyboard */,
 				82CC98B92A4D022E00B2F30D /* Info.plist */,
 				820462B52A4D0E1C0030874F /* Currency.swift */,
-				820462B92A4D12C00030874F /* CurrencyViewController.swift */,
+				820462B92A4D12C00030874F /* CurrencyViewModel.swift */,
 				820462BB2A4D2E190030874F /* APIManager.swift */,
 				820462BD2A4D42510030874F /* Router.swift */,
 				820462BF2A4D48D60030874F /* ResponseSerializerDecodeble.swift */,
 				820462C12A4D49CC0030874F /* APIError.swift */,
+				820462C72A4D997F0030874F /* BitCoinHeaderCollectionViewCell.swift */,
+				820462C82A4D997F0030874F /* BitCoinHeaderCollectionViewCell.xib */,
+				820462CB2A4D99990030874F /* BitCoinCollectionViewCell.swift */,
+				820462CC2A4D99990030874F /* BitCoinCollectionViewCell.xib */,
+				820462CF2A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift */,
+				820462D02A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib */,
 			);
 			path = "btc-app";
 			sourceTree = "<group>";
@@ -161,7 +179,7 @@
 			);
 			mainGroup = 82CC989F2A4D022A00B2F30D;
 			packageReferences = (
-				820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 82CC98A92A4D022A00B2F30D /* Products */;
 			projectDirPath = "";
@@ -177,6 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820462CE2A4D99990030874F /* BitCoinCollectionViewCell.xib in Resources */,
+				820462CA2A4D997F0030874F /* BitCoinHeaderCollectionViewCell.xib in Resources */,
+				820462D22A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib in Resources */,
 				82CC98B82A4D022E00B2F30D /* LaunchScreen.storyboard in Resources */,
 				82CC98B52A4D022E00B2F30D /* Assets.xcassets in Resources */,
 				82CC98B32A4D022A00B2F30D /* Main.storyboard in Resources */,
@@ -233,13 +254,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				820462BC2A4D2E190030874F /* APIManager.swift in Sources */,
-				820462BA2A4D12C00030874F /* CurrencyViewController.swift in Sources */,
+				820462BA2A4D12C00030874F /* CurrencyViewModel.swift in Sources */,
 				820462B62A4D0E1C0030874F /* Currency.swift in Sources */,
 				820462BE2A4D42510030874F /* Router.swift in Sources */,
+				820462C92A4D997F0030874F /* BitCoinHeaderCollectionViewCell.swift in Sources */,
 				820462C02A4D48D60030874F /* ResponseSerializerDecodeble.swift in Sources */,
 				82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */,
 				82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */,
 				82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */,
+				820462CD2A4D99990030874F /* BitCoinCollectionViewCell.swift in Sources */,
+				820462D12A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift in Sources */,
 				820462C22A4D49CC0030874F /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +488,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -477,7 +501,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		820462B12A4D0B4D0030874F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 820462B02A4D0B4D0030874F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

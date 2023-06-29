@@ -8,4 +8,6 @@ use_frameworks!
 
 target 'btc-app' do
   pod 'ProgressHUD'
+  # Resource Management
+  pod 'R.swift'
 end
