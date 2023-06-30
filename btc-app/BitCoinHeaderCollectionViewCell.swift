@@ -9,16 +9,16 @@ import UIKit
 
 class BitCoinHeaderCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var charNameLabel: UILabel!
+    @IBOutlet weak var disclaimerLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func configContent(titleText: String, detailText: String) {
-        titleLabel.text = titleText
-        detailLabel.text = detailText
+    func configContent(charNameText: String, disclaimerText: String) {
+        charNameLabel.text = charNameText
+        disclaimerLabel.text = disclaimerText
     }
 }

@@ -33,11 +33,52 @@ class CurrencyViewModel {
         return bpiRateList?.count ?? 0
     }
     
-    func cellForItemAt(indexPath: NSIndexPath) -> BPIRate? {
+    func cellForItemAt(indexPath: IndexPath) -> BPIRate? {
         return bpiRateList?[indexPath.row] ?? nil
     }
     
+    func sizeForItemAt(indexPath: IndexPath, widthSize: CGFloat) -> CGSize {
+        guard self.numberOfItem() > 0 else {
+            return .zero
+        }
+        var fittingSize = UIView.layoutFittingCompressedSize
+        fittingSize.width = widthSize
+        let cell = R.nib.bitCoinCollectionViewCell.firstView(withOwner: nil)!
+        if let model = self.cellForItemAt(indexPath: indexPath) {
+            cell.configContent(btcModel: model)
+        }
+        let size = cell.contentView.systemLayoutSizeFitting(fittingSize, withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
+        return size
+    }
+    
+    func referenceSizeForHeaderInSection(section: Int, widthSize: CGFloat) -> CGSize{
+        guard let charNameText = currency?.chartName, let disclaimerText = currency?.disclaimer else {
+            return .zero
+        }
+        var fittingSize = UIView.layoutFittingCompressedSize
+        fittingSize.width = widthSize
+        let header = R.nib.bitCoinHeaderCollectionViewCell.firstView(withOwner: nil)!
+        header.configContent(charNameText: charNameText, disclaimerText: disclaimerText)
+        let size = header.systemLayoutSizeFitting(fittingSize, withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
+        return size
+    }
+    
+    func referenceSizeForFooterInSection(section: Int, widthSize: CGFloat) -> CGSize{
+        guard let updatedTimeText = currency?.contentTimeStamp.updated else {
+            return .zero
+        }
+        var fittingSize = UIView.layoutFittingCompressedSize
+        fittingSize.width = widthSize
+        let header = R.nib.bitCoinFooterCollectionViewCell.firstView(withOwner: nil)!
+        header.configContent(updatedTimeText: updatedTimeText)
+        let size = header.systemLayoutSizeFitting(fittingSize, withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
+        return size
+    }
+    
     func manageBpiRateList() {
+        if bpiRateList!.count > 0 {
+            bpiRateList?.removeAll()
+        }
         if let bpiItem = self.currency?.bpi {
             bpiRateList?.append(bpiItem.usd)
             bpiRateList?.append(bpiItem.gbp)
@@ -58,7 +99,7 @@ class CurrencyViewModel {
             weakSelf.manageBpiRateList()
             weakSelf.delegate?.fetchContentSuccess(vc: weakSelf)
             guard weakSelf.pollingTimer == nil else { return }
-//            weakSelf.initFetchScheduled()
+            weakSelf.initFetchScheduled()
         }, failure: { [weak self] error in
             ProgressHUD.showFailed("\(error)")
             guard let weakSelf = self else { return }

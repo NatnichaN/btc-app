@@ -24,10 +24,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-LS-w2e">
                                 <rect key="frame" x="15" y="15" width="345" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16x-vG-NnK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16x-vG-NnK">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -51,7 +51,7 @@
                 <constraint firstAttribute="trailing" secondItem="HrO-Ta-TRo" secondAttribute="trailing" id="Ikx-28-4B3"/>
             </constraints>
             <connections>
-                <outlet property="titleLabel" destination="16x-vG-NnK" id="Jd8-Sz-3n4"/>
+                <outlet property="updatedTimeLabel" destination="16x-vG-NnK" id="DwX-hA-c40"/>
             </connections>
             <point key="canvasLocation" x="-31" y="20"/>
         </collectionViewCell>

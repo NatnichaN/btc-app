@@ -9,14 +9,14 @@ import UIKit
 
 class BitCoinFooterCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var updatedTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func configContent(titleText: String) {
-        titleLabel.text = titleText
+    func configContent(updatedTimeText: String) {
+        updatedTimeLabel.text = "Latest updated on: \(updatedTimeText)"
     }
 }

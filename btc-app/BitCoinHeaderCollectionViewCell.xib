@@ -21,18 +21,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aav-sQ-lV2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zAB-hK-CUb">
-                                <rect key="frame" x="15" y="15" width="345" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssn-ov-Ftw">
+                                <rect key="frame" x="15" y="15" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="grB-zD-ZMr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zAB-hK-CUb">
+                                <rect key="frame" x="15" y="80" width="345" height="5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssn-ov-Ftw">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4F-yR-hpG">
-                                        <rect key="frame" x="0.0" y="20.333333333333339" width="345" height="49.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4F-yR-hpG">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -42,9 +45,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zAB-hK-CUb" secondAttribute="trailing" constant="15" id="4Fa-qn-cKv"/>
+                            <constraint firstItem="Ssn-ov-Ftw" firstAttribute="top" secondItem="aav-sQ-lV2" secondAttribute="top" constant="15" id="Rr5-DM-QX8"/>
                             <constraint firstAttribute="bottom" secondItem="zAB-hK-CUb" secondAttribute="bottom" constant="15" id="VFT-ot-yuk"/>
+                            <constraint firstItem="Ssn-ov-Ftw" firstAttribute="leading" secondItem="aav-sQ-lV2" secondAttribute="leading" constant="15" id="cfc-bz-yjU"/>
                             <constraint firstItem="zAB-hK-CUb" firstAttribute="leading" secondItem="aav-sQ-lV2" secondAttribute="leading" constant="15" id="f6V-e8-7dd"/>
-                            <constraint firstItem="zAB-hK-CUb" firstAttribute="top" secondItem="aav-sQ-lV2" secondAttribute="top" constant="15" id="whE-qh-Fue"/>
+                            <constraint firstAttribute="trailing" secondItem="Ssn-ov-Ftw" secondAttribute="trailing" constant="15" id="fhX-oA-7eL"/>
+                            <constraint firstItem="zAB-hK-CUb" firstAttribute="top" secondItem="Ssn-ov-Ftw" secondAttribute="bottom" constant="15" id="igm-zd-jLQ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -57,8 +63,8 @@
                 <constraint firstAttribute="bottom" secondItem="aav-sQ-lV2" secondAttribute="bottom" id="zFh-Ek-5kc"/>
             </constraints>
             <connections>
-                <outlet property="detailLabel" destination="K4F-yR-hpG" id="3Hr-XZ-O4v"/>
-                <outlet property="titleLabel" destination="Ssn-ov-Ftw" id="BBV-Y1-t1E"/>
+                <outlet property="charNameLabel" destination="Ssn-ov-Ftw" id="ubL-Av-eLk"/>
+                <outlet property="disclaimerLabel" destination="K4F-yR-hpG" id="yHb-G0-6NI"/>
             </connections>
             <point key="canvasLocation" x="39.694656488549619" y="19.718309859154932"/>
         </collectionViewCell>
