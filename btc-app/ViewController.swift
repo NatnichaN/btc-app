@@ -20,9 +20,9 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
     }
     
     func registerCell() {
-//        collectionView.register(R.nib., forCellWithReuseIdentifier: <#T##String#>)
-//        collectionView.register(R.nib.packageDetailHeaderView, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
-//        collectionView.register(R.nib.cancelPackageFooterView, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter)
+        collectionView.register(R.nib.bitCoinCollectionViewCell)
+        collectionView.register(R.nib.bitCoinHeaderCollectionViewCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
+        collectionView.register(R.nib.bitCoinFooterCollectionViewCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter)
     }
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
