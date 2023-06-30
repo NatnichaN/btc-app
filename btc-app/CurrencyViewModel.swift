@@ -8,8 +8,9 @@
 import Foundation
 import ProgressHUD
 protocol CurrencyViewModelDelegate: AnyObject {
-    func fetchContentSuccess(vc: CurrencyViewModel)
-    func fetchContentFailed(vc: CurrencyViewModel)
+    func fetchContentSuccess(vm: CurrencyViewModel)
+    func fetchContentFailed(vm: CurrencyViewModel)
+    func updateCurrencyOutput(vm: CurrencyViewModel)
 }
 
 enum BPIType: String, Codable {
@@ -23,8 +24,12 @@ class CurrencyViewModel {
     var delegate: CurrencyViewModelDelegate?
     var currency: Currency?
     var bpiRateList: [BPIRate]? = []
+    var bpiCodeList: [BPIType]? = []
     private var pollingTimer: Timer!
     let fetchInterval = 60.0
+    var currentCurrencyUnit: BPIType? = .usa
+    var btcCurrencyOutput: CGFloat = 0.0
+    var btcCurrencyOutputText: String = "0.0"
     
     init() {
     }
@@ -76,15 +81,37 @@ class CurrencyViewModel {
     }
     
     func manageBpiRateList() {
-        if bpiRateList!.count > 0 {
-            bpiRateList?.removeAll()
-        }
+        bpiRateList?.removeAll()
+        bpiCodeList?.removeAll()
         if let bpiItem = self.currency?.bpi {
             bpiRateList?.append(bpiItem.usd)
             bpiRateList?.append(bpiItem.gbp)
             bpiRateList?.append(bpiItem.eur)
+            bpiCodeList?.append(bpiItem.usd.code)
+            bpiCodeList?.append(bpiItem.gbp.code)
+            bpiCodeList?.append(bpiItem.eur.code)
         }
     }
+    
+    func convertCurrencyToBtc(input: CGFloat) {
+        var rateFloat: CGFloat
+//        switch currencyUnit {
+        switch currentCurrencyUnit {
+        case .usa:
+            rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
+        case .gbp:
+            rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
+        case .eur:
+            rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
+        case .none:
+            rateFloat = 1.0
+        }
+        let btc = input / rateFloat
+        btcCurrencyOutput = btc
+        btcCurrencyOutputText = String(format: "%.4f", btc)
+        delegate?.updateCurrencyOutput(vm: self)
+    }
+    
     // MAKR: - fetch data
     func initFetchScheduled() {
         pollingTimer = Timer.scheduledTimer(timeInterval: fetchInterval, target: self, selector: #selector(fetchData), userInfo: nil, repeats: true)
@@ -97,7 +124,7 @@ class CurrencyViewModel {
             guard let weakSelf = self else { return }
             weakSelf.currency = currency
             weakSelf.manageBpiRateList()
-            weakSelf.delegate?.fetchContentSuccess(vc: weakSelf)
+            weakSelf.delegate?.fetchContentSuccess(vm: weakSelf)
             guard weakSelf.pollingTimer == nil else { return }
 //            weakSelf.initFetchScheduled()
         }, failure: { [weak self] error in
