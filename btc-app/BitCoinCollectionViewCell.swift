@@ -22,14 +22,30 @@ class BitCoinCollectionViewCell: UICollectionViewCell {
     
     func configUI() {
         bgView.layer.cornerRadius = 15.0
-        bgView.layer.borderColor = UIColor.lightGray.cgColor
         bgView.layer.borderWidth = 1.0
+        bgView.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     func configContent(btcModel: BPIRate) {
         btcCodeLabel.text = btcModel.code.rawValue
-        btcSymbolLabel.text = btcModel.symbol
+//        if let currencySymbolAsciiValue = btcModel.symbol.first?.asciiValue {
+//            btcSymbolLabel.text = String(UnicodeScalar(UInt8(currencySymbolAsciiValue)))
+//        }
+        btcSymbolLabel.text = convertToCurrencySymbol(symbol: btcModel.symbol)
         btcRateLabel.text = btcModel.rate
         btcDescLabel.text = btcModel.description
+    }
+    
+    func convertToCurrencySymbol(symbol: String) -> String {
+        switch symbol {
+        case "&#36;":
+            return "$"
+        case "&pound;":
+            return "₤"
+        case "&euro;":
+            return "€"
+        default:
+            return ""
+        }
     }
 }
