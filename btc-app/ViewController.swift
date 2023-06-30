@@ -67,9 +67,9 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
                 return UICollectionReusableView()
             }
         } else {
-            if let updatedTimeText = currencyModel.currency?.contentTimeStamp.updated {
+            if let currencyModel = currencyModel.currency {
                 let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: R.reuseIdentifier.bitCoinFooterCell, for: indexPath)!
-                footer.configContent(updatedTimeText: updatedTimeText)
+                footer.configContent(currencyModel: currencyModel)
                 return footer
             } else {
                 // Shouldn't happen

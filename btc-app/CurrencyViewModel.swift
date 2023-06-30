@@ -64,13 +64,13 @@ class CurrencyViewModel {
     }
     
     func referenceSizeForFooterInSection(section: Int, widthSize: CGFloat) -> CGSize{
-        guard let updatedTimeText = currency?.contentTimeStamp.updated else {
+        guard let currencyModel = currency else {
             return .zero
         }
         var fittingSize = UIView.layoutFittingCompressedSize
         fittingSize.width = widthSize
         let header = R.nib.bitCoinFooterCollectionViewCell.firstView(withOwner: nil)!
-        header.configContent(updatedTimeText: updatedTimeText)
+        header.configContent(currencyModel: currencyModel)
         let size = header.systemLayoutSizeFitting(fittingSize, withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
         return size
     }

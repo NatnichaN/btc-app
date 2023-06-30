@@ -28,9 +28,6 @@ class BitCoinCollectionViewCell: UICollectionViewCell {
 
     func configContent(btcModel: BPIRate) {
         btcCodeLabel.text = btcModel.code.rawValue
-//        if let currencySymbolAsciiValue = btcModel.symbol.first?.asciiValue {
-//            btcSymbolLabel.text = String(UnicodeScalar(UInt8(currencySymbolAsciiValue)))
-//        }
         btcSymbolLabel.text = convertToCurrencySymbol(symbol: btcModel.symbol)
         btcRateLabel.text = btcModel.rate
         btcDescLabel.text = btcModel.description
