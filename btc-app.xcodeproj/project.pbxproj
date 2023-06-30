@@ -21,6 +21,7 @@
 		820462CE2A4D99990030874F /* BitCoinCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820462CC2A4D99990030874F /* BitCoinCollectionViewCell.xib */; };
 		820462D12A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462CF2A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift */; };
 		820462D22A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820462D02A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib */; };
+		820462DB2A4E77260030874F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820462DA2A4E77260030874F /* R.generated.swift */; };
 		82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */; };
 		82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */; };
 		82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CC98AF2A4D022A00B2F30D /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		820462CC2A4D99990030874F /* BitCoinCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitCoinCollectionViewCell.xib; sourceTree = "<group>"; };
 		820462CF2A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinFooterCollectionViewCell.swift; sourceTree = "<group>"; };
 		820462D02A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitCoinFooterCollectionViewCell.xib; sourceTree = "<group>"; };
+		820462DA2A4E77260030874F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		82CC98A82A4D022A00B2F30D /* btc-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "btc-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CC98AB2A4D022A00B2F30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CC98AD2A4D022A00B2F30D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 				C61856DA81375328D0FB782D /* Pods_btc_app.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		820462D92A4E76F30030874F /* R.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				820462DA2A4E77260030874F /* R.generated.swift */,
+			);
+			path = R.Swift;
 			sourceTree = "<group>";
 		};
 		82CC989F2A4D022A00B2F30D = {
@@ -116,6 +126,7 @@
 				820462CC2A4D99990030874F /* BitCoinCollectionViewCell.xib */,
 				820462CF2A4D99B50030874F /* BitCoinFooterCollectionViewCell.swift */,
 				820462D02A4D99B50030874F /* BitCoinFooterCollectionViewCell.xib */,
+				820462D92A4E76F30030874F /* R.Swift */,
 			);
 			path = "btc-app";
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 			buildConfigurationList = 82CC98BC2A4D022E00B2F30D /* Build configuration list for PBXNativeTarget "btc-app" */;
 			buildPhases = (
 				7B55FF54D8211218D5205B55 /* [CP] Check Pods Manifest.lock */,
+				820462D82A4E75DC0030874F /* R.Swift */,
 				82CC98A42A4D022A00B2F30D /* Sources */,
 				82CC98A52A4D022A00B2F30D /* Frameworks */,
 				82CC98A62A4D022A00B2F30D /* Resources */,
@@ -246,6 +258,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		820462D82A4E75DC0030874F /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,6 +291,7 @@
 				820462BE2A4D42510030874F /* Router.swift in Sources */,
 				820462C92A4D997F0030874F /* BitCoinHeaderCollectionViewCell.swift in Sources */,
 				820462C02A4D48D60030874F /* ResponseSerializerDecodeble.swift in Sources */,
+				820462DB2A4E77260030874F /* R.generated.swift in Sources */,
 				82CC98B02A4D022A00B2F30D /* ViewController.swift in Sources */,
 				82CC98AC2A4D022A00B2F30D /* AppDelegate.swift in Sources */,
 				82CC98AE2A4D022A00B2F30D /* SceneDelegate.swift in Sources */,
