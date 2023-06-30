@@ -32,8 +32,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ttn-XY-6WR"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-RE-QRx">
-                                <rect key="frame" x="15" y="640.66666666666663" width="363" height="162.33333333333337"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-gu-Yqt">
+                                <rect key="frame" x="15" y="630.66666666666663" width="363" height="162.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GjH-Qz-muH">
                                         <rect key="frame" x="15" y="5" width="333" height="152.33333333333334"/>
@@ -95,30 +95,31 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="GjH-Qz-muH" secondAttribute="trailing" constant="15" id="4Yq-Lo-dJY"/>
-                                    <constraint firstItem="GjH-Qz-muH" firstAttribute="top" secondItem="aRt-RE-QRx" secondAttribute="top" constant="5" id="8dl-IB-XLJ"/>
-                                    <constraint firstItem="GjH-Qz-muH" firstAttribute="leading" secondItem="aRt-RE-QRx" secondAttribute="leading" constant="15" id="gwb-Dv-0mg"/>
-                                    <constraint firstAttribute="bottom" secondItem="GjH-Qz-muH" secondAttribute="bottom" constant="5" id="i9h-dp-fmF"/>
+                                    <constraint firstAttribute="trailing" secondItem="GjH-Qz-muH" secondAttribute="trailing" constant="15" id="480-Z4-5fE"/>
+                                    <constraint firstAttribute="bottom" secondItem="GjH-Qz-muH" secondAttribute="bottom" constant="5" id="MhI-E4-cQ0"/>
+                                    <constraint firstItem="GjH-Qz-muH" firstAttribute="leading" secondItem="Kgz-gu-Yqt" secondAttribute="leading" constant="15" id="ib7-GZ-3Mj"/>
+                                    <constraint firstItem="GjH-Qz-muH" firstAttribute="top" secondItem="Kgz-gu-Yqt" secondAttribute="top" constant="5" id="n4m-zh-7cf"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kgz-gu-Yqt" secondAttribute="trailing" constant="15" id="1eF-cf-7KI"/>
                             <constraint firstItem="1PT-44-Mfs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GgG-tD-jjF"/>
+                            <constraint firstItem="Kgz-gu-Yqt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="JCM-Q8-XRz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1PT-44-Mfs" secondAttribute="bottom" id="LLE-dl-ZtW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aRt-RE-QRx" secondAttribute="bottom" constant="15" id="MAp-OJ-8r6"/>
                             <constraint firstItem="1PT-44-Mfs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P8A-g5-2Pw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1PT-44-Mfs" secondAttribute="trailing" id="VrM-ky-1qf"/>
-                            <constraint firstItem="aRt-RE-QRx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="YSe-0V-im6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aRt-RE-QRx" secondAttribute="trailing" constant="15" id="eBa-XV-zbK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kgz-gu-Yqt" secondAttribute="bottom" constant="25" id="jh8-qy-w9f"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bgView" destination="aRt-RE-QRx" id="ctW-wn-7q3"/>
+                        <outlet property="bottomConstraint" destination="jh8-qy-w9f" id="KEr-SL-XPB"/>
                         <outlet property="collectionView" destination="1PT-44-Mfs" id="yKf-68-voy"/>
                         <outlet property="confirmButton" destination="xfP-GL-4er" id="RYj-wo-He3"/>
                         <outlet property="converterTitleLabel" destination="cQk-Dx-NiI" id="J6M-GY-y36"/>
+                        <outlet property="converterView" destination="Kgz-gu-Yqt" id="D8I-8U-xvS"/>
                         <outlet property="currencyUnitTextfield" destination="mf0-K2-Gr7" id="dcx-0n-WCM"/>
                         <outlet property="inputTextfield" destination="VTu-Uv-dbt" id="dDj-Vg-93M"/>
                         <outlet property="outputLabel" destination="dZn-oy-AF6" id="GKE-5S-wTf"/>

@@ -16,8 +16,8 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var outputUnitLabel: UILabel!
     @IBOutlet weak var confirmButton: UIButton!
-    @IBOutlet weak var bgView: UIView!
-    
+    @IBOutlet weak var converterView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     var currencyModel = CurrencyViewModel()
     
     override func viewDidLoad() {
@@ -26,6 +26,7 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         currencyModel.delegate = self
         currencyModel.fetchData()
         registerCell()
+        registNotiEvent()
         configUI()
         configContent()
     }
@@ -36,10 +37,18 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         collectionView.register(R.nib.bitCoinFooterCollectionViewCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter)
     }
     
+    func registNotiEvent() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShowOrHide(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShowOrHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     func configUI() {
-        bgView.layer.cornerRadius = 15.0
-        bgView.layer.borderWidth = 1.0
-        bgView.layer.borderColor = UIColor.lightGray.cgColor
+        converterView.isHidden = true
+        converterView.layer.cornerRadius = 15.0
+        converterView.layer.borderWidth = 1.0
+        converterView.layer.borderColor = UIColor.lightGray.cgColor
         // Toolbar for inputTextfield
         let toolbarInput = UIToolbar()
         toolbarInput.tintColor = view.tintColor
@@ -131,6 +140,8 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         print("fetchContentSuccess")
         collectionView.reloadData()
         picker.selectRow(0, inComponent: 0, animated: true)
+        guard converterView.isHidden else { return }
+        converterView.isHidden = false
     }
     
     func fetchContentFailed(vm: CurrencyViewModel) {
@@ -147,6 +158,70 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         let inputValue = CGFloat((inputTextfield.text! as NSString).doubleValue)
         currencyModel.convertCurrencyToBtc(inputValue: inputValue)
     }
+    
+    // MARK:- Notification event
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let info = notification.userInfo else {
+            return
+        }
+       let keyboardHeight = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        bottomConstraint.constant = keyboardHeight
+        let endValue = info[UIResponder.keyboardFrameEndUserInfoKey]
+        let durationValue = info[UIResponder.keyboardAnimationDurationUserInfoKey]
+        let curveValue = info[UIResponder.keyboardAnimationCurveUserInfoKey]
+        // Transform the keyboard's frame into our view's coordinate system
+        let endRect = view.convert((endValue as AnyObject).cgRectValue, from: view.window)
+        // Find out how much the keyboard overlaps our scroll view
+        let keyboardOverlap = collectionView.frame.maxY - endRect.origin.y
+
+        collectionView.contentInset.bottom = keyboardOverlap
+        collectionView.verticalScrollIndicatorInsets.bottom = keyboardOverlap
+        
+        let duration = (durationValue as AnyObject).doubleValue
+        let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+        UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        guard let info = notification.userInfo else {
+            return
+        }
+       let keyboardHeight = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        bottomConstraint.constant = 25
+        UIView.animate(withDuration: duration, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+}
+
+extension ViewController {
+    @objc func keyboardWillShowOrHide(notification: NSNotification) {
+            // Get required info out of the notification
+        if let scrollView = collectionView, let userInfo = notification.userInfo,
+           let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
+           let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey],
+           let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
+                
+                // Transform the keyboard's frame into our view's coordinate system
+                let endRect = view.convert((endValue as AnyObject).cgRectValue, from: view.window)
+                
+                // Find out how much the keyboard overlaps our scroll view
+                let keyboardOverlap = scrollView.frame.maxY - endRect.origin.y
+                
+                // Set the scroll view's content inset & scroll indicator to avoid the keyboard
+                scrollView.contentInset.bottom = keyboardOverlap
+                scrollView.verticalScrollIndicatorInsets.bottom = keyboardOverlap
+                
+                let duration = (durationValue as AnyObject).doubleValue
+                let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+                UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+            }
+        }
 }
 // MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
