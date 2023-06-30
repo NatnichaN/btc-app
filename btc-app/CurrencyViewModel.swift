@@ -99,7 +99,7 @@ class CurrencyViewModel {
             weakSelf.manageBpiRateList()
             weakSelf.delegate?.fetchContentSuccess(vc: weakSelf)
             guard weakSelf.pollingTimer == nil else { return }
-            weakSelf.initFetchScheduled()
+//            weakSelf.initFetchScheduled()
         }, failure: { [weak self] error in
             ProgressHUD.showFailed("\(error)")
             guard let weakSelf = self else { return }

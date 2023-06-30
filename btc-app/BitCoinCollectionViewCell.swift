@@ -17,13 +17,16 @@ class BitCoinCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        configUI()
+    }
+    
+    func configUI() {
+        bgView.layer.cornerRadius = 15.0
+        bgView.layer.borderColor = UIColor.lightGray.cgColor
+        bgView.layer.borderWidth = 1.0
     }
 
     func configContent(btcModel: BPIRate) {
-        bgView.layer.borderColor = UIColor.red.cgColor
-        bgView.layer.borderWidth = 1.0
-        bgView.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
-        bgView.layer.cornerRadius = 15.0
         btcCodeLabel.text = btcModel.code.rawValue
         btcSymbolLabel.text = btcModel.symbol
         btcRateLabel.text = btcModel.rate
