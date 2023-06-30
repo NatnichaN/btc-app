@@ -103,9 +103,9 @@ class CurrencyViewModel {
         case .usa:
             rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
         case .gbp:
-            rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
+            rateFloat = currency?.bpi.gbp.rateFloat ?? 1.0
         case .eur:
-            rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
+            rateFloat = currency?.bpi.eur.rateFloat ?? 1.0
         case .none:
             rateFloat = 1.0
         }
@@ -129,7 +129,7 @@ class CurrencyViewModel {
             weakSelf.manageBpiRateList()
             weakSelf.delegate?.fetchContentSuccess(vm: weakSelf)
             guard weakSelf.pollingTimer == nil else { return }
-//            weakSelf.initFetchScheduled()
+            weakSelf.initFetchScheduled()
         }, failure: { [weak self] error in
             ProgressHUD.showFailed("\(error)")
             guard let weakSelf = self else { return }

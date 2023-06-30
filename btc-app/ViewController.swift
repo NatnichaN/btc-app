@@ -188,41 +188,16 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         guard let info = notification.userInfo else {
             return
         }
-       let keyboardHeight = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
-        let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         bottomConstraint.constant = 25
-        UIView.animate(withDuration: duration, animations: {
+        let curveValue = info[UIResponder.keyboardAnimationCurveUserInfoKey]
+        let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+        UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
             self.view.layoutIfNeeded()
         })
     }
 }
 
-extension ViewController {
-    @objc func keyboardWillShowOrHide(notification: NSNotification) {
-            // Get required info out of the notification
-        if let scrollView = collectionView, let userInfo = notification.userInfo,
-           let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
-           let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey],
-           let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
-                
-                // Transform the keyboard's frame into our view's coordinate system
-                let endRect = view.convert((endValue as AnyObject).cgRectValue, from: view.window)
-                
-                // Find out how much the keyboard overlaps our scroll view
-                let keyboardOverlap = scrollView.frame.maxY - endRect.origin.y
-                
-                // Set the scroll view's content inset & scroll indicator to avoid the keyboard
-                scrollView.contentInset.bottom = keyboardOverlap
-                scrollView.verticalScrollIndicatorInsets.bottom = keyboardOverlap
-                
-                let duration = (durationValue as AnyObject).doubleValue
-                let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
-                UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
-                    self.view.layoutIfNeeded()
-                }, completion: nil)
-            }
-        }
-}
 // MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
@@ -265,6 +240,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedIndex = picker.selectedRow(inComponent: 0)
         currencyUnitTextfield.text = currencyModel.bpiCodeList?[selectedIndex].rawValue
         currencyModel.currentCurrencyUnit = currencyModel.bpiCodeList?[selectedIndex]
+        guard inputTextfield.text != "" else { return }
+        didTapDoneInputTextField(sender: inputTextfield)
     }
     // MARK: - UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
