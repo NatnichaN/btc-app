@@ -33,7 +33,7 @@ class CurrencyViewModel {
     
     init() {
     }
-    
+    // MARK: - Cell
     func numberOfItem() -> Int {
         return bpiRateList?.count ?? 0
     }
@@ -92,10 +92,13 @@ class CurrencyViewModel {
             bpiCodeList?.append(bpiItem.eur.code)
         }
     }
+    // MARK: - Converter
+    func numberOfItemInPicker() -> Int {
+        return bpiCodeList?.count ?? 0
+    }
     
-    func convertCurrencyToBtc(input: CGFloat) {
+    func convertCurrencyToBtc(inputValue: CGFloat) {
         var rateFloat: CGFloat
-//        switch currencyUnit {
         switch currentCurrencyUnit {
         case .usa:
             rateFloat = currency?.bpi.usd.rateFloat ?? 1.0
@@ -106,7 +109,7 @@ class CurrencyViewModel {
         case .none:
             rateFloat = 1.0
         }
-        let btc = input / rateFloat
+        let btc = inputValue / rateFloat
         btcCurrencyOutput = btc
         btcCurrencyOutputText = String(format: "%.4f", btc)
         delegate?.updateCurrencyOutput(vm: self)

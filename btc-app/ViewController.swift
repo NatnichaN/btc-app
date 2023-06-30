@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     private var picker: UIPickerView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -40,25 +40,38 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         bgView.layer.cornerRadius = 15.0
         bgView.layer.borderWidth = 1.0
         bgView.layer.borderColor = UIColor.lightGray.cgColor
-        let toolbar = UIToolbar()
-        toolbar.tintColor = view.tintColor
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(didTapDoneButton(sender:)))
+        // Toolbar for inputTextfield
+        let toolbarInput = UIToolbar()
+        toolbarInput.tintColor = view.tintColor
+        let confirmButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(didTapDoneInputTextField(sender:)))
+        let cancelInputButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(didTapCanceInput(sender:)))
         let flexer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolbar.setItems([flexer, doneButton], animated: false)
-        toolbar.sizeToFit()
+        toolbarInput.setItems([cancelInputButton, flexer, confirmButton], animated: false)
+        toolbarInput.sizeToFit()
+        
+        inputTextfield.inputAccessoryView = toolbarInput
+        // Toolbar for currencyUnitTextfield
+        let toolbarPicker = UIToolbar()
+        toolbarPicker.tintColor = view.tintColor
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(didTapCancelButton(sender:)))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(didTapDoneButton(sender:)))
+        toolbarPicker.setItems([cancelButton, flexer, doneButton], animated: false)
+        toolbarPicker.sizeToFit()
 
         picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
-
         currencyUnitTextfield.inputView = picker
-        currencyUnitTextfield.inputAccessoryView = toolbar
+        currencyUnitTextfield.inputAccessoryView = toolbarPicker
     }
     
     func configContent() {
         converterTitleLabel.text = "Converter"
         outputUnitLabel.text = "BTC"
-        confirmButton.setTitle("Done", for: .normal)
+        outputLabel.text = "0.0"
+        confirmButton.setTitle("Convert", for: .normal)
+        inputTextfield.placeholder = "Input amount for convert"
+        currencyUnitTextfield.text = "USD"
     }
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -117,6 +130,7 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
     func fetchContentSuccess(vm: CurrencyViewModel) {
         print("fetchContentSuccess")
         collectionView.reloadData()
+        picker.selectRow(0, inComponent: 0, animated: true)
     }
     
     func fetchContentFailed(vm: CurrencyViewModel) {
@@ -126,13 +140,41 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
     func updateCurrencyOutput(vm: CurrencyViewModel) {
         outputLabel.text = vm.btcCurrencyOutputText
     }
-    // MARK: - PickerCollectionReusableViewDelegate
+    //MARK: - Action
+    @IBAction func didTapConvertButton(_ sender: UIButton) {
+        guard inputTextfield.text != nil else { return }
+        inputTextfield.endEditing(true)
+        let inputValue = CGFloat((inputTextfield.text! as NSString).doubleValue)
+        currencyModel.convertCurrencyToBtc(inputValue: inputValue)
+    }
+}
+// MARK: - UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        // reset to orignal amount
+        textField.text = "0.0"
+        return false
+    }
+    
+    @objc func didTapCanceInput(sender: AnyObject) {
+        inputTextfield.endEditing(true)
+    }
+
+    @objc func didTapDoneInputTextField(sender: AnyObject) {
+        inputTextfield.endEditing(true)
+        let inputValue = CGFloat((inputTextfield.text! as NSString).doubleValue)
+        currencyModel.convertCurrencyToBtc(inputValue: inputValue)
+    }
+}
+// MARK: - PickerCollectionReusableViewDelegate
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return currencyModel.numberOfItemInPicker()
     }
 
     private func dismissPicker() {
@@ -146,7 +188,7 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
     @objc func didTapDoneButton(sender: AnyObject) {
         dismissPicker()
         let selectedIndex = picker.selectedRow(inComponent: 0)
-//        inputUnitLabel.text = currencyModel.bpiCodeList?[selectedIndex].rawValue
+        currencyUnitTextfield.text = currencyModel.bpiCodeList?[selectedIndex].rawValue
         currencyModel.currentCurrencyUnit = currencyModel.bpiCodeList?[selectedIndex]
     }
     // MARK: - UIPickerViewDelegate
@@ -155,4 +197,3 @@ class ViewController: UIViewController, CurrencyViewModelDelegate, UICollectionV
         return currencyCodeText
     }
 }
-
